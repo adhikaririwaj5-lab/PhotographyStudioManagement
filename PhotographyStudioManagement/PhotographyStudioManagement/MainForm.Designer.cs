@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnAddClient = new Button();
             SuspendLayout();
+            // 
+            // btnAddClient
+            // 
+            btnAddClient.Location = new Point(204, 177);
+            btnAddClient.Name = "btnAddClient";
+            btnAddClient.Size = new Size(94, 29);
+            btnAddClient.TabIndex = 0;
+            btnAddClient.Text = "Add Client";
+            btnAddClient.UseVisualStyleBackColor = true;
+            btnAddClient.Click += btnAddClient_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(btnAddClient);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Photography Studio Management System";
@@ -42,5 +54,7 @@
         }
 
         #endregion
+
+        private Button btnAddClient;
     }
 }
