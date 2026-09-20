@@ -14,5 +14,13 @@ namespace PhotographyStudioManagement
                 form.ShowDialog();
             }
         }
+
+        private void btnViewClients_Click(object sender, EventArgs e)
+        {
+            using (ViewClientsForm form = new ViewClientsForm())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

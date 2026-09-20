@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             btnAddClient = new Button();
+            btnViewClients = new Button();
             SuspendLayout();
             // 
             // btnAddClient
             // 
-            btnAddClient.Location = new Point(204, 177);
+            btnAddClient.Location = new Point(45, 86);
             btnAddClient.Name = "btnAddClient";
             btnAddClient.Size = new Size(94, 29);
             btnAddClient.TabIndex = 0;
@@ -41,11 +42,22 @@
             btnAddClient.UseVisualStyleBackColor = true;
             btnAddClient.Click += btnAddClient_Click;
             // 
+            // btnViewClients
+            // 
+            btnViewClients.Location = new Point(45, 121);
+            btnViewClients.Name = "btnViewClients";
+            btnViewClients.Size = new Size(124, 29);
+            btnViewClients.TabIndex = 1;
+            btnViewClients.Text = "View Clients";
+            btnViewClients.UseVisualStyleBackColor = true;
+            btnViewClients.Click += btnViewClients_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(btnViewClients);
             Controls.Add(btnAddClient);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -56,5 +68,6 @@
         #endregion
 
         private Button btnAddClient;
+        private Button btnViewClients;
     }
 }
