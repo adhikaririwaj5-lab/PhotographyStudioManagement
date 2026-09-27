@@ -1,37 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PhotographyStudioManagement.Models
+﻿namespace PhotographyStudioManagement.Models
 {
-    public class Service
+    public abstract class Service
     {
+        private decimal basePrice;
+
         public int ServiceID { get; set; }
 
         public string ServiceName { get; set; }
 
-        public string Description { get; set; }
-
-        public decimal BasePrice { get; set; }
-
-        public Service()
+        public decimal BasePrice
         {
-            ServiceName = "";
-            Description = "";
+            get { return basePrice; }
+
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException(
+                        "Base price cannot be negative.");
+                }
+
+                basePrice = value;
+            }
         }
 
-        public Service(int serviceID, string serviceName,
-            string description, decimal basePrice)
+        protected Service(
+            int serviceID,
+            string serviceName,
+            decimal basePrice)
         {
             ServiceID = serviceID;
             ServiceName = serviceName;
-            Description = description;
             BasePrice = basePrice;
         }
 
-        public string GetServiceDetails()
+        public abstract decimal CalculatePrice(int hours);
+
+        public virtual string GetServiceDetails()
         {
-            return $"{ServiceName} - ${BasePrice:F2}";
+            return $"{ServiceName} - Base Price: ${BasePrice:F2}";
         }
     }
 }
