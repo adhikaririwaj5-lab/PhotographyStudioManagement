@@ -28,5 +28,12 @@ namespace PhotographyStudioManagement
             using AddBookingForm form = new AddBookingForm();
             form.ShowDialog();
         }
+        private void btnViewBookings_Click(object sender, EventArgs e)
+        {
+            using ViewBookingsForm form =
+                new ViewBookingsForm();
+
+            form.ShowDialog();
+        }
     }
 }

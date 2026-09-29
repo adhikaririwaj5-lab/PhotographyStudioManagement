@@ -31,6 +31,7 @@
             btnAddClient = new Button();
             btnViewClients = new Button();
             btnAddbooking = new Button();
+            btnViewBookings = new Button();
             SuspendLayout();
             // 
             // btnAddClient
@@ -63,11 +64,22 @@
             btnAddbooking.UseVisualStyleBackColor = true;
             btnAddbooking.Click += btnAddbooking_Click;
             // 
+            // btnViewBookings
+            // 
+            btnViewBookings.Location = new Point(45, 212);
+            btnViewBookings.Name = "btnViewBookings";
+            btnViewBookings.Size = new Size(133, 29);
+            btnViewBookings.TabIndex = 3;
+            btnViewBookings.Text = "View Bookings";
+            btnViewBookings.UseVisualStyleBackColor = true;
+            btnViewBookings.Click += btnViewBookings_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(btnViewBookings);
             Controls.Add(btnAddbooking);
             Controls.Add(btnViewClients);
             Controls.Add(btnAddClient);
@@ -77,11 +89,12 @@
             ResumeLayout(false);
         }
 
-        
+
         #endregion
 
         private Button btnAddClient;
         private Button btnViewClients;
         private Button btnAddbooking;
+        private Button btnViewBookings;
     }
 }
