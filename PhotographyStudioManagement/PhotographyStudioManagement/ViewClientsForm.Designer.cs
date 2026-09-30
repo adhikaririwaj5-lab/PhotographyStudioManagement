@@ -34,6 +34,8 @@
             btnSearch = new Button();
             btnRefresh = new Button();
             dvgClients = new DataGridView();
+            btnDeleteClient = new Button();
+            btnEditClient = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgClients).BeginInit();
             SuspendLayout();
             // 
@@ -88,7 +90,7 @@
             dvgClients.AllowUserToAddRows = false;
             dvgClients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgClients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgClients.Location = new Point(78, 182);
+            dvgClients.Location = new Point(98, 171);
             dvgClients.Name = "dvgClients";
             dvgClients.ReadOnly = true;
             dvgClients.RowHeadersWidth = 51;
@@ -96,11 +98,33 @@
             dvgClients.Size = new Size(474, 205);
             dvgClients.TabIndex = 5;
             // 
+            // btnDeleteClient
+            // 
+            btnDeleteClient.Location = new Point(366, 397);
+            btnDeleteClient.Name = "btnDeleteClient";
+            btnDeleteClient.Size = new Size(94, 29);
+            btnDeleteClient.TabIndex = 6;
+            btnDeleteClient.Text = "Delete Client";
+            btnDeleteClient.UseVisualStyleBackColor = true;
+            btnDeleteClient.Click += btnDeleteClient_Click;
+            // 
+            // btnEditClient
+            // 
+            btnEditClient.Location = new Point(212, 397);
+            btnEditClient.Name = "btnEditClient";
+            btnEditClient.Size = new Size(94, 29);
+            btnEditClient.TabIndex = 7;
+            btnEditClient.Text = "Edit Client";
+            btnEditClient.UseVisualStyleBackColor = true;
+            btnEditClient.Click += btnEditClient_Click;
+            // 
             // ViewClientsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEditClient);
+            Controls.Add(btnDeleteClient);
             Controls.Add(dvgClients);
             Controls.Add(btnRefresh);
             Controls.Add(btnSearch);
@@ -122,5 +146,7 @@
         private Button btnSearch;
         private Button btnRefresh;
         private DataGridView dvgClients;
+        private Button btnDeleteClient;
+        private Button btnEditClient;
     }
 }

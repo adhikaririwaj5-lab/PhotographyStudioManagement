@@ -41,6 +41,8 @@ namespace PhotographyStudioManagement
                 string sql = @"
                     SELECT
                         b.BookingID AS 'Booking ID',
+                        b.ClientID AS 'ClientID',
+                        b.ServiceID AS 'ServiceID',
                         c.Name AS 'Client',
                         s.ServiceName AS 'Service',
                         b.BookingDate AS 'Booking Date',
@@ -95,6 +97,8 @@ namespace PhotographyStudioManagement
                 table.Load(reader);
 
                 dgvBookings.DataSource = table;
+                dgvBookings.Columns["ClientID"].Visible = false;
+                dgvBookings.Columns["ServiceID"].Visible = false;
 
                 dgvBookings.AutoSizeColumnsMode =
                     DataGridViewAutoSizeColumnsMode.Fill;
@@ -141,5 +145,120 @@ namespace PhotographyStudioManagement
 
             txtSearch.Focus();
         }
+        private void btnDeleteBooking_Click(object sender, EventArgs e)
+        {
+            if (dgvBookings.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a booking to delete.");
+                return;
+            }
+
+            int bookingID = Convert.ToInt32(
+                dgvBookings.SelectedRows[0].Cells["Booking ID"].Value);
+
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete Booking #{bookingID}?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result != DialogResult.Yes)
+                return;
+
+            try
+            {
+                using SqliteConnection connection =
+                    DatabaseHelper.GetConnection();
+
+                connection.Open();
+
+                string sql = @"
+            DELETE FROM Bookings
+            WHERE BookingID = @BookingID;";
+
+                using SqliteCommand command =
+                    new SqliteCommand(sql, connection);
+
+                command.Parameters.AddWithValue(
+                    "@BookingID",
+                    bookingID);
+
+                command.ExecuteNonQuery();
+
+                MessageBox.Show(
+                    "Booking deleted successfully!");
+
+                LoadBookings();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error deleting booking: " + ex.Message);
+            }
+        }
+        private void btnEditBooking_Click(object sender, EventArgs e)
+        {
+            if (dgvBookings.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a booking to edit.");
+                return;
+            }
+
+            DataGridViewRow row =
+                dgvBookings.SelectedRows[0];
+
+            int bookingID =
+                Convert.ToInt32(row.Cells["Booking ID"].Value);
+
+            int clientID =
+                Convert.ToInt32(row.Cells["ClientID"].Value);
+
+            int serviceID =
+                Convert.ToInt32(row.Cells["ServiceID"].Value);
+
+            DateTime bookingDate =
+                Convert.ToDateTime(row.Cells["Booking Date"].Value);
+
+            string location =
+                row.Cells["Location"].Value?.ToString() ?? "";
+
+            int hours =
+                Convert.ToInt32(row.Cells["Hours"].Value);
+
+            decimal price =
+                Convert.ToDecimal(row.Cells["Price"].Value);
+
+            string bookingStatus =
+                row.Cells["Booking Status"].Value?.ToString() ?? "Pending";
+
+            string paymentStatus =
+                row.Cells["Payment Status"].Value?.ToString() ?? "Unpaid";
+
+            decimal amountPaid =
+                Convert.ToDecimal(row.Cells["Amount Paid"].Value);
+
+            string notes =
+                row.Cells["Notes"].Value?.ToString() ?? "";
+
+            using EditBookingForm form =
+                new EditBookingForm(
+                    bookingID,
+                    clientID,
+                    serviceID,
+                    bookingDate,
+                    location,
+                    hours,
+                    price,
+                    bookingStatus,
+                    paymentStatus,
+                    amountPaid,
+                    notes);
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadBookings();
+            }
+        }
+
     }
 }

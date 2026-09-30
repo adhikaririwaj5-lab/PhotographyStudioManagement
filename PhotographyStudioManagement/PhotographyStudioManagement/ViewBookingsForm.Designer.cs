@@ -36,6 +36,8 @@
             btnSearch = new Button();
             btnRefresh = new Button();
             dgvBookings = new DataGridView();
+            btnDeleteBooking = new Button();
+            btnEditBooking = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBookings).BeginInit();
             SuspendLayout();
             // 
@@ -109,7 +111,7 @@
             dgvBookings.AllowUserToAddRows = false;
             dgvBookings.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBookings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBookings.Location = new Point(36, 242);
+            dgvBookings.Location = new Point(37, 225);
             dgvBookings.Name = "dgvBookings";
             dgvBookings.ReadOnly = true;
             dgvBookings.RowHeadersWidth = 51;
@@ -117,11 +119,33 @@
             dgvBookings.Size = new Size(996, 325);
             dgvBookings.TabIndex = 7;
             // 
+            // btnDeleteBooking
+            // 
+            btnDeleteBooking.Location = new Point(496, 562);
+            btnDeleteBooking.Name = "btnDeleteBooking";
+            btnDeleteBooking.Size = new Size(94, 29);
+            btnDeleteBooking.TabIndex = 8;
+            btnDeleteBooking.Text = "Delete Booking";
+            btnDeleteBooking.UseVisualStyleBackColor = true;
+            btnDeleteBooking.Click += btnDeleteBooking_Click;
+            // 
+            // btnEditBooking
+            // 
+            btnEditBooking.Location = new Point(365, 562);
+            btnEditBooking.Name = "btnEditBooking";
+            btnEditBooking.Size = new Size(94, 29);
+            btnEditBooking.TabIndex = 9;
+            btnEditBooking.Text = "Edit Booking";
+            btnEditBooking.UseVisualStyleBackColor = true;
+            btnEditBooking.Click += btnEditBooking_Click;
+            // 
             // ViewBookingsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 603);
+            Controls.Add(btnEditBooking);
+            Controls.Add(btnDeleteBooking);
             Controls.Add(dgvBookings);
             Controls.Add(btnRefresh);
             Controls.Add(btnSearch);
@@ -148,5 +172,7 @@
         private Button btnSearch;
         private Button btnRefresh;
         private DataGridView dgvBookings;
+        private Button btnDeleteBooking;
+        private Button btnEditBooking;
     }
 }
