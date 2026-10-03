@@ -30,6 +30,12 @@ namespace PhotographyStudioManagement
                 MessageBox.Show("Please enter the phone number.");
                 return;
             }
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text) &&
+                !txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                return;
+            }
 
             try
             {
