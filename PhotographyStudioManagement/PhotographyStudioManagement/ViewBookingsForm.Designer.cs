@@ -143,6 +143,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1082, 603);
             Controls.Add(btnEditBooking);
             Controls.Add(btnDeleteBooking);

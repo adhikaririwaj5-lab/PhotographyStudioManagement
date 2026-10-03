@@ -11,7 +11,7 @@ namespace PhotographyStudioManagement
 
             DatabaseHelper.InitializeDatabase();
 
-            Application.Run(new MainForm());
+            Application.Run(new Main());
         }
     }
 }

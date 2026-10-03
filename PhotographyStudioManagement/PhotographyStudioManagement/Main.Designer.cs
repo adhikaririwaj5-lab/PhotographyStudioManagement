@@ -1,6 +1,6 @@
 ﻿namespace PhotographyStudioManagement
 {
-    partial class MainForm
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,11 +32,12 @@
             btnViewClients = new Button();
             btnAddbooking = new Button();
             btnViewBookings = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnAddClient
             // 
-            btnAddClient.Location = new Point(45, 86);
+            btnAddClient.Location = new Point(269, 247);
             btnAddClient.Name = "btnAddClient";
             btnAddClient.Size = new Size(94, 29);
             btnAddClient.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // btnViewClients
             // 
-            btnViewClients.Location = new Point(45, 121);
+            btnViewClients.Location = new Point(269, 299);
             btnViewClients.Name = "btnViewClients";
             btnViewClients.Size = new Size(124, 29);
             btnViewClients.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnAddbooking
             // 
-            btnAddbooking.Location = new Point(45, 166);
+            btnAddbooking.Location = new Point(409, 247);
             btnAddbooking.Name = "btnAddbooking";
             btnAddbooking.Size = new Size(133, 29);
             btnAddbooking.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnViewBookings
             // 
-            btnViewBookings.Location = new Point(45, 212);
+            btnViewBookings.Location = new Point(409, 299);
             btnViewBookings.Name = "btnViewBookings";
             btnViewBookings.Size = new Size(133, 29);
             btnViewBookings.TabIndex = 3;
@@ -74,19 +75,32 @@
             btnViewBookings.UseVisualStyleBackColor = true;
             btnViewBookings.Click += btnViewBookings_Click;
             // 
-            // MainForm
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(393, 164);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 4;
+            // 
+            // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(882, 503);
+            Controls.Add(label1);
             Controls.Add(btnViewBookings);
             Controls.Add(btnAddbooking);
             Controls.Add(btnViewClients);
             Controls.Add(btnAddClient);
-            Name = "MainForm";
+            Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Photography Studio Management System";
+            Load += this.Main_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
 
@@ -96,5 +110,6 @@
         private Button btnViewClients;
         private Button btnAddbooking;
         private Button btnViewBookings;
+        private Label label1;
     }
 }

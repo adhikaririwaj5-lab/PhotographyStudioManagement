@@ -57,7 +57,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 24);
+            label1.Location = new Point(13, 19);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 45);
+            label2.Location = new Point(13, 53);
             label2.Name = "label2";
             label2.Size = new Size(59, 20);
             label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 74);
+            label3.Location = new Point(12, 84);
             label3.Name = "label3";
             label3.Size = new Size(103, 20);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 94);
+            label4.Location = new Point(13, 117);
             label4.Name = "label4";
             label4.Size = new Size(69, 20);
             label4.TabIndex = 3;
@@ -93,7 +93,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 126);
+            label5.Location = new Point(13, 150);
             label5.Name = "label5";
             label5.Size = new Size(51, 20);
             label5.TabIndex = 4;
@@ -102,7 +102,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 162);
+            label6.Location = new Point(13, 183);
             label6.Name = "label6";
             label6.Size = new Size(44, 20);
             label6.TabIndex = 5;
@@ -111,7 +111,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 196);
+            label7.Location = new Point(13, 217);
             label7.Name = "label7";
             label7.Size = new Size(111, 20);
             label7.TabIndex = 6;
@@ -120,7 +120,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(12, 215);
+            label8.Location = new Point(12, 251);
             label8.Name = "label8";
             label8.Size = new Size(112, 20);
             label8.TabIndex = 7;
@@ -129,7 +129,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(12, 251);
+            label9.Location = new Point(12, 285);
             label9.Name = "label9";
             label9.Size = new Size(97, 20);
             label9.TabIndex = 8;
@@ -138,7 +138,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(12, 281);
+            label10.Location = new Point(20, 321);
             label10.Name = "label10";
             label10.Size = new Size(51, 20);
             label10.TabIndex = 9;
@@ -147,7 +147,7 @@
             // cmbClient
             // 
             cmbClient.FormattingEnabled = true;
-            cmbClient.Location = new Point(171, 21);
+            cmbClient.Location = new Point(143, 11);
             cmbClient.Name = "cmbClient";
             cmbClient.Size = new Size(151, 28);
             cmbClient.TabIndex = 10;
@@ -155,7 +155,7 @@
             // cmbPaymentStatus
             // 
             cmbPaymentStatus.FormattingEnabled = true;
-            cmbPaymentStatus.Location = new Point(145, 226);
+            cmbPaymentStatus.Location = new Point(145, 243);
             cmbPaymentStatus.Name = "cmbPaymentStatus";
             cmbPaymentStatus.Size = new Size(151, 28);
             cmbPaymentStatus.TabIndex = 11;
@@ -163,7 +163,7 @@
             // cmbBookingStatus
             // 
             cmbBookingStatus.FormattingEnabled = true;
-            cmbBookingStatus.Location = new Point(145, 192);
+            cmbBookingStatus.Location = new Point(144, 209);
             cmbBookingStatus.Name = "cmbBookingStatus";
             cmbBookingStatus.Size = new Size(151, 28);
             cmbBookingStatus.TabIndex = 12;
@@ -171,49 +171,49 @@
             // cmbService
             // 
             cmbService.FormattingEnabled = true;
-            cmbService.Location = new Point(171, 45);
+            cmbService.Location = new Point(144, 45);
             cmbService.Name = "cmbService";
             cmbService.Size = new Size(151, 28);
             cmbService.TabIndex = 13;
             // 
             // dtpBookingDate
             // 
-            dtpBookingDate.Location = new Point(154, 74);
+            dtpBookingDate.Location = new Point(145, 77);
             dtpBookingDate.Name = "dtpBookingDate";
             dtpBookingDate.Size = new Size(250, 27);
             dtpBookingDate.TabIndex = 14;
             // 
             // txtLocation
             // 
-            txtLocation.Location = new Point(154, 102);
+            txtLocation.Location = new Point(145, 110);
             txtLocation.Name = "txtLocation";
             txtLocation.Size = new Size(125, 27);
             txtLocation.TabIndex = 15;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(155, 162);
+            txtPrice.Location = new Point(144, 176);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(125, 27);
             txtPrice.TabIndex = 17;
             // 
             // txtAmountPaid
             // 
-            txtAmountPaid.Location = new Point(145, 260);
+            txtAmountPaid.Location = new Point(145, 278);
             txtAmountPaid.Name = "txtAmountPaid";
             txtAmountPaid.Size = new Size(125, 27);
             txtAmountPaid.TabIndex = 18;
             // 
             // txtNotes
             // 
-            txtNotes.Location = new Point(145, 293);
+            txtNotes.Location = new Point(145, 314);
             txtNotes.Name = "txtNotes";
             txtNotes.Size = new Size(125, 27);
             txtNotes.TabIndex = 19;
             // 
             // numHours
             // 
-            numHours.Location = new Point(155, 135);
+            numHours.Location = new Point(144, 143);
             numHours.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
             numHours.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numHours.Name = "numHours";
@@ -255,6 +255,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(682, 653);
             Controls.Add(btnCancel);
             Controls.Add(btnUpdateBooking);

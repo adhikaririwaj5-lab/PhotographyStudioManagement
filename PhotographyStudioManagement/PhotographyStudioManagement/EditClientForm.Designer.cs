@@ -41,7 +41,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(100, 92);
+            label1.Location = new Point(123, 99);
             label1.Name = "label1";
             label1.Size = new Size(94, 20);
             label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(100, 134);
+            label2.Location = new Point(123, 134);
             label2.Name = "label2";
             label2.Size = new Size(53, 20);
             label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(100, 183);
+            label3.Location = new Point(123, 169);
             label3.Name = "label3";
             label3.Size = new Size(49, 20);
             label3.TabIndex = 2;
@@ -67,23 +67,23 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(238, 85);
+            txtName.Location = new Point(238, 92);
             txtName.Name = "txtName";
-            txtName.Size = new Size(125, 27);
+            txtName.Size = new Size(160, 27);
             txtName.TabIndex = 3;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(238, 183);
+            txtEmail.Location = new Point(238, 169);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(125, 27);
+            txtEmail.Size = new Size(160, 27);
             txtEmail.TabIndex = 4;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(238, 134);
+            txtPhone.Location = new Point(238, 131);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(125, 27);
+            txtPhone.Size = new Size(160, 27);
             txtPhone.TabIndex = 5;
             // 
             // btnupdate
@@ -110,6 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(btnCancel);
             Controls.Add(btnupdate);
